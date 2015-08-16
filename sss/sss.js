@@ -11,7 +11,8 @@ $.fn.sss = function(options) {
 	startOn : 0,
 	speed : 3500,
 	transition : 400,
-	arrows : true
+	arrows : true,
+	pp : true
 	}, options);
 
 	return this.each(function() {
@@ -101,9 +102,16 @@ pause = false;
 $('.ssspaus').css("background-image", "url(../css/images/pause.png)");  
 }
 }
-	if (settings.arrows) {
+	if ((settings.arrows) && (settings.pp)) {
 	slider.append('<div class="sssprev"/>', '<div class="sssnext"/>',  '<div class="ssspaus"/>') ;
 	}
+	else if ((!settings.arrows) && (settings.pp)) {
+	slider.append('<div class="ssspaus"/>');
+	}
+	else if ((settings.arrows) && (!settings.pp)) {
+	slider.append('<div class="sssprev"/>', '<div class="sssnext"/>');
+	}
+
 
 	next = slider.find('.sssnext'),
 	prev = slider.find('.sssprev');
