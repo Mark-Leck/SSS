@@ -27,6 +27,7 @@ $.fn.sss = function(options) {
 	starting_slide = settings.startOn,
 	target = starting_slide > slide_count - 1 ? 0 : starting_slide,
 	animating = false,
+	pause = false,
 	clicked,
 	timer,
 	key,
@@ -67,6 +68,11 @@ $.fn.sss = function(options) {
 	function next_slide() {
 	target = target === slide_count - 1 ? 0 : target + 1;
 	animate_slide(target);
+	if (pause === true)
+	{
+	pause = false;
+	$('.ssspaus').css("background-image", "url(../css/images/pause.png)");  
+	}
 	}
 
 // Prev Slide
@@ -74,14 +80,34 @@ $.fn.sss = function(options) {
 	function prev_slide() {
 	target = target === 0 ? slide_count - 1 : target - 1;
 	animate_slide(target);
+	if (pause === true)
+	{
+	pause = false;
+	$('.ssspaus').css("background-image", "url(../css/images/pause.png)");  
 	}
-
+	}
+// Paus Slide
+function paus_slide(){
+if ((timer) && (pause === false))
+{
+clearTimeout(timer);
+pause = true;
+$('.ssspaus').css("background-image", "url(../css/images/play.png)");  
+}
+else
+{
+next_slide();
+pause = false;
+$('.ssspaus').css("background-image", "url(../css/images/pause.png)");  
+}
+}
 	if (settings.arrows) {
-	slider.append('<div class="sssprev"/>', '<div class="sssnext"/>');
+	slider.append('<div class="sssprev"/>', '<div class="sssnext"/>',  '<div class="ssspaus"/>') ;
 	}
 
 	next = slider.find('.sssnext'),
 	prev = slider.find('.sssprev');
+	paus = slider.find('.ssspaus');
 
 	$(window).load(function() {
 
@@ -89,6 +115,7 @@ $.fn.sss = function(options) {
 	clicked = $(e.target);
 	if (clicked.is(next)) { next_slide() }
 	else if (clicked.is(prev)) { prev_slide() }
+	else if (clicked.is(paus)) { paus_slide() }
 	});
 
 	animate_slide(target);

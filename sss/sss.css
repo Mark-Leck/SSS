@@ -36,16 +36,30 @@
 	background: url('images/arr.png') no-repeat;
 }
 
+
+
 .sssprev {
-	left: 3%;
+	left: 0.1%;
 	background-position: 0 50%;
 }
 
 .sssnext {
-	right: 3%;
+	right: 0.1%;
 	background-position: -26px 50%;
 }
 
+.ssspaus {
+	width: 25px;
+	height: 100%;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	background: url('images/pause.png') no-repeat;
+}
+.ssspaus {
+left: 50%;
+background-position: 0 99.9%;
+}
 .sssprev:hover, .sssnext:hover {
 	cursor: pointer;
 }
