@@ -4,6 +4,8 @@ Simply modded by @DGSurveyor
 Added a play/pause button.
 Added option to enable/disable play/pause (pp) button.
 
+Example usage:
+
 <script>
 jQuery(function($) {
 $('.slider').sss({
@@ -16,3 +18,7 @@ pp: true // Set to false to hide Play/Pause button.
 });
 });
 </script>
+
+For full usage instructions please refer to the original site:
+
+http://supersimpleslider.com/#basic
