@@ -2,6 +2,7 @@ lovingly built by @intllgnt
 Simply modded by @DGSurveyor
 
 Added a play/pause button.
+
 Added option to enable/disable play/pause (pp) button.
 
 Example usage:
