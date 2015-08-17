@@ -5,8 +5,8 @@ Added a play/pause button.
 Added option to enable/disable play/pause (pp) button.
 
 Example usage:
-
-<!--<script>-->
+{View RAW for source code here}
+<script>
 jQuery(function($) {
 $('.slider').sss({
 slideShow : true, // Set to false to prevent SSS from automatically animating.
@@ -17,7 +17,7 @@ arrows: true, // Set to false to hide navigation arrows.
 pp: true // Set to false to hide Play/Pause button.
 });
 });
-<!--</script>-->
+</script>
 
 For full usage instructions please refer to the original site:
 
