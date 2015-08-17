@@ -7,6 +7,7 @@ Added option to enable/disable play/pause (pp) button.
 Example usage:
 {View RAW for source code here}
 <script>
+//OPTIONS
 jQuery(function($) {
 $('.slider').sss({
 slideShow : true, // Set to false to prevent SSS from automatically animating.
