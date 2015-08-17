@@ -5,7 +5,7 @@ Added a play/pause button.
 Added option to enable/disable play/pause (pp) button.
 
 Example usage:
-{View RAW for source code here}
+{To view the example source code view in the RAW file}...
 <script>
 //OPTIONS
 jQuery(function($) {
